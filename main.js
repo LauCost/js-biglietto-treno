@@ -37,4 +37,10 @@ if (userAge > 65) {
     prezzo_finale = prezzo;
 }
 
+
+
 console.log("Il prezzo del biglietto è " + prezzo_finale);
+
+
+//Stampa il prezzo del biglietto nella pagina 
+document.getElementById("prezzo_biglietto").innerHTML = "Il prezzo del biglietto è : " + prezzo_finale.toFixed(2) + "€"
