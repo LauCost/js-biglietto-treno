@@ -1,16 +1,19 @@
 //Chiede il numero di km da voler percorrere
 
-const kilometri = prompt("Quanti kilometri vuoi percorrere?");
+let kilometri = prompt("Quanti kilometri vuoi percorrere?");
 
-Number(kilometri);
+/* Number(kilometri); */
 
-console.log("L'utente vuole percorrere " + kilometri + " kilometri");
+console.log(Number(kilometri));
 
 //Chiede l'età all'utente
 
-const userAge = prompt("Quanti anni hai?");
+let userAge = prompt("Quanti anni hai?");
 
-Number(userAge);
+console.log(Number(userAge));
 
-console.log("L'utente ha " + userAge + " anni");
+
+//Calcoliamo il prezzo del biglietto in base ai kilometri scelti
+
+
 
