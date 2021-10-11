@@ -24,23 +24,46 @@ z = 0.4;
 const prezzo = kilometri * x;
 
 
-// Calcola il prezzo finale del biglietto in base all'età
-
+// Calcola il prezzo finale del biglietto applicando lo sconto in base all'età
+let sconto
 let prezzo_finale
-console.log("Solo kilometri: " + prezzo);
+console.log("Il prezzo del biglietto senza sconto: " + prezzo);
 
 if (userAge > 65) {
-    prezzo_finale = prezzo * z;
+
+    //Calcola lo sconto in base all'età
+    sconto = prezzo * z;
+    console.log("lo sconto del biglietto è:  " + sconto);
+
+    //Calcola il prezzo finale del biglietto applicando lo sconto
+    prezzo_finale = prezzo - sconto;
+    console.log("Il prezzo del biglietto è " + prezzo_finale);
+
+
+    //Stampa il prezzo nella pagina
+    document.getElementById("prezzo_biglietto").innerHTML = "Il prezzo scontato del biglietto per over 65 è : " + prezzo_finale.toFixed(2) + "€"
+
 } else if (userAge < 18) {
-    prezzo_finale = prezzo * y;
+
+    //Calcola lo sconto in base all'età
+    sconto = prezzo * y;
+    console.log("lo sconto del biglietto è:  " + sconto);
+
+    //Calcola il prezzo finale del biglietto applicando lo sconto
+    prezzo_finale = prezzo - sconto;
+    console.log("Il prezzo del biglietto è " + prezzo_finale);
+
+
+    //Stampa il prezzo nella pagina
+    document.getElementById("prezzo_biglietto").innerHTML = "Il prezzo del biglietto per i minorenni è : " + prezzo_finale.toFixed(2) + "€"
+
 } else {
     prezzo_finale = prezzo;
+    console.log("Il prezzo del biglietto è " + prezzo_finale);
+
+    //Stampa il prezzo nella pagina
+    document.getElementById("prezzo_biglietto").innerHTML = "Il prezzo del biglietto è : " + prezzo_finale.toFixed(2) + "€"
+
 }
 
 
-
-console.log("Il prezzo del biglietto è " + prezzo_finale);
-
-
-//Stampa il prezzo del biglietto nella pagina 
-document.getElementById("prezzo_biglietto").innerHTML = "Il prezzo del biglietto è : " + prezzo_finale.toFixed(2) + "€"
