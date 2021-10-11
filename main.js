@@ -1,5 +1,16 @@
 //Chiede il numero di km da voler percorrere
 
-const kilometri = prompt("Quanti kilometri vuoi percorrere?:number");
+const kilometri = prompt("Quanti kilometri vuoi percorrere?");
 
-console.log(kilometri);
+Number(kilometri);
+
+console.log("L'utente vuole percorrere " + kilometri + " kilometri");
+
+//Chiede l'età all'utente
+
+const userAge = prompt("Quanti anni hai?");
+
+Number(userAge);
+
+console.log("L'utente ha " + userAge + " anni");
+
